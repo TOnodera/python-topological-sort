@@ -1,0 +1,11 @@
+version: '3'
+services: 
+    app:
+        build: ./
+        environment:
+            - DISPLAY=:0
+            - TZ=Asia/Tokyo
+            - USERNAME=${USERNAME}
+            - USEREMAIL=${USEREMAIL}
+        volumes:
+            - ./:/home/python/app
