@@ -1,7 +1,7 @@
 from cell import Cell
 
 
-class LikedList:
+class LinkedList:
     def __init__(self):
         self.top = None
 
@@ -29,7 +29,7 @@ class LikedList:
                 return True
         else:
             cp = self.top
-            while cp.next():
+            while cp.rest():
                 n -= 1
                 if n == 0:
                     cp.set_rest(cp.rest().rest())
